@@ -21,10 +21,10 @@ En quelques mots, l'utilisateur qui se balade sur votre site envoie des requête
 
 La configuration d'une route se présente comme suit:
 
-        resources :photos
+        ```ruby resources :photos```
 
 Biensûr il est possible de déclarer plusieurs routes en même temps:
-        resources :photos, :books, :videos
+        ```ruby resources :photos, :books, :videos```
 
 
 
