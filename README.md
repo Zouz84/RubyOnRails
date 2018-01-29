@@ -20,11 +20,10 @@ Les routes permettent d’interpréter les URL et d’orienter vers les bonnes a
 En quelques mots, l'utilisateur qui se balade sur votre site envoie des requêtes qui sont adressées au controlleur. Ce derneir a besoin de savoir quelle methode utiliser. Le *routeur* va donc regarder le verbe HTTP utilisé (Get, Post, Put ou delete) aini que l'URL demandé, et va le croiser avec la bonne action à effectuer par le controlleur.
 
 La configuration d'une route se présente comme suit:
-
- ```resources :photos```
+```resources :photos```
 
 Biensûr il est possible de déclarer plusieurs routes en même temps:
-        ```ruby resources :photos, :books, :videos```
+        ``` resources :photos, :books, :videos```
 
 
 
@@ -35,7 +34,9 @@ la base de données, dans laquelle le model va chercher et trier les données qu
 ## GET/POST
 
 **get**: pour les moins bilingues d'entre nous: "Obtenir".
+
 **Post**: qu'on peut comprendre comme "puts" ou plus simplement "poster".
+
 Si l'on veut accéder à toutes les photos, par exemples, le controlleur va renvoyer la liste de tous les articles grâce à la méthode get. Des fois il va remplir un formulaire (par ex nouvel utilisateur, nom, email ect) le formulaire va envoyer un truc et ça c'est *post*, quand tu soumets le formulaire, c'est une autre méthode dans ton controller, tu vas lui dire, attention là on est en train de poster un truc.
 
 ## Le concept de migration
