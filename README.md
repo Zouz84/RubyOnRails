@@ -5,5 +5,33 @@ Si vous avez toujours voulu tout savoir sur Ruby On Rails, passez votre chemin, 
 Si vous avez la flemme, alors voici les termes à connaître.
 
 ## Lame statique
-Un site statique est composé de pages fixes, qui ne changeront pas quelque soit l'utilisateur. Un site dynamique sera présenté de façon différente selon l'interaction avec le visiteur. Les informations présentées ne sont pas les mêmes selon les requêtes de l'internaute. Par exemple twitter / facebook sont des sites dynamiques et un site de restaurant avec juste l'adresse, le menu, des photos du restau est un site statique. Dès qu'il y a un compte utilisateur, possibilité de commenter, ou de poster des choses par exemple, c'est un site statique.
+Un *site statique* est composé de pages fixes, qui ne changeront pas quelque soit l'utilisateur. Un site dynamique sera présenté de façon différente selon l'interaction avec le visiteur. Les informations présentées ne sont pas les mêmes selon les requêtes de l'internaute. Par exemple twitter / facebook sont des sites dynamiques et un site de restaurant avec juste l'adresse, le menu, des photos du restau est un site statique. Dès qu'il y a un compte utilisateur, possibilité de commenter, ou de poster des choses par exemple, c'est un site dynamique.
 
+## Most Valuable Controller
+
+*Model View Controller* : C'est un modèle utilisé par Rails ou par d'autres languages comme PHP pour montrer une application web. On peut l'expliquer grâce à une image. Voici le chemin de la requête : l'utilisateur va sur le site, en fonction de ce qu'il demande au site, comment il se connecte dessus, le site va aller sur le routeur et va demander une fonction, une méthode du controlleur. Le controlleur reconnait la méthode, demande au modèle les informations nécessaire dans la database. Le model renvoit ces informations au controlleur, qui fait le lien avec la view, c'est à dire que le controlleur envoit les informations récupérer à la view, qui va construire la page, la mettre en forme (en HTML et ruby, avec ces informations et renvoyer ce message au controlleur, qui renvoit ça sur le site et à l'utilisateur.
+
+## > Sur la route, oui, il y a eu du doute...
+
+Les routes permettent d’interpréter les URL et d’orienter vers les bonnes actions des controlleurs. La configuration se trouve dans le fichier config/routes.rb .
+
+## La base de donnée
+
+la base de données, dans laquelle le model va chercher et trier les données qu'ils l'intéresse pour le renvoyer au controller (dans le schéma MVC).
+
+## GET/POST
+
+*get*: si l'utilisateur va sur articles, le controller va renvoyer la liste de tous les articles grâce à la méthode get. Des fois il va remplir un formulaire (par ex nouvel utilisateur, nom, email ect) le formulaire va envoyer un truc et ça c'est *post*, quand tu soumets le formulaire, c'est une autre méthode dans ton controller, tu vas lui dire, attention là on est en train de poster un truc.
+
+## Le concept de migration
+Ce qu'on appelle "migration" sur ruby on rails permet de modifier la structure de la base de données. C'est à dire ajouter, supprimer ou modifier une table ou une colonne. Lorsque l'on souhaite modifier le nom d'une colonne par exemple, il faut effectuer une migration pour l'enregistrer.
+
+
+## Les relations entre les models et les BDD
+les modèles font le lien entre la base de données et le controlleur, donc notre application au final. Ils permettent de selectionner dans la base de données les informations qui nous intéresse pour les transmettre au controlleur et les mettre en forme dans la view.
+
+## CRUD
+Create, read, update, destroy = Ce n'est pas la définition du street art, mais comment faire pour intéragir de manière simple avec notre base de donnée mais par le biais du front-end parce qu'avec la console c'est super mais c'est pas comme ça que les users vont l'utiliser, c'est via notre site. 
+Pour avoir son CRUD : resources :articles sur le controller puis rails routes sur la commande et on a le CRUD complet sur le model Articles
+
+![alt text](https://github.com/Nymze/Ruby_on_Rails/blob/master/MVC.png "MVC 1")
