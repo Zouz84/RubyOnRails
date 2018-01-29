@@ -20,11 +20,11 @@ Les routes permettent d’interpréter les URL et d’orienter vers les bonnes a
 En quelques mots, l'utilisateur qui se balade sur votre site envoie des requêtes qui sont adressées au controlleur. Ce derneir a besoin de savoir quelle methode utiliser. Le *routeur* va donc regarder le verbe HTTP utilisé (Get, Post, Put ou delete) aini que l'URL demandé, et va le croiser avec la bonne action à effectuer par le controlleur.
 
 La configuration d'une route se présente comme suit:
-'''ruby
-resources :photos
-'''
+
+        resources :photos
+
 Biensûr il est possible de déclarer plusieurs routes en même temps:
-'resources :photos, :books, :videos'
+        resources :photos, :books, :videos
 
 
 
