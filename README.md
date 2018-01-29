@@ -9,7 +9,7 @@ Un *site statique* est composé de pages fixes, qui ne changeront pas quelque so
 
 ## Most Valuable Controller (MVC) :basketball:
 
-*Model View Controller* : C'est un modèle utilisé par Rails ou par d'autres languages comme PHP pour montrer une application web. On peut l'expliquer grâce à une image. Voici le chemin de la requête : l'utilisateur va sur le site, en fonction de ce qu'il demande au site, comment il se connecte dessus, le site va aller sur le routeur et va demander une fonction, une méthode du controlleur. Le controlleur reconnait la méthode, demande au modèle les informations nécessaire dans la database. Le model renvoit ces informations au controlleur, qui fait le lien avec la view, c'est à dire que le controlleur envoit les informations récupérer à la view, qui va construire la page, la mettre en forme (en HTML et ruby, avec ces informations et renvoyer ce message au controlleur, qui renvoit ça sur le site et à l'utilisateur.
+*Model View Controller* enfait. C'est un modèle utilisé par *Rails* ou par d'autres languages comme PHP pour montrer une application web. On peut l'expliquer grâce à une image. Voici le chemin de la requête : l'utilisateur va sur le site, en fonction de ce qu'il demande au site, comment il se connecte dessus, le site va aller sur le routeur et va demander une fonction, une méthode du controlleur. Le controlleur reconnait la méthode, demande au modèle les informations nécessaire dans la database. Le model renvoit ces informations au controlleur, qui fait le lien avec la view, c'est à dire que le controlleur envoit les informations récupérer à la view, qui va construire la page, la mettre en forme (en HTML et ruby, avec ces informations et renvoyer ce message au controlleur, qui renvoit ça sur le site et à l'utilisateur.
 
 ![alt text](https://github.com/Nymze/Ruby_on_Rails/blob/master/MVC.png "MVC 1")
 
@@ -30,12 +30,12 @@ Biensûr il est possible de déclarer plusieurs routes en même temps:
 
 ## La base de donnée
 
-la base de données, dans laquelle le model va chercher et trier les données qui l'intéresse pour le renvoyer au controlleur (dans le schéma MVC). Contient tout un tas d'informations. Par exemple tous les comptes linkedins des moussaillons qui s'inscrivent à The Hacking Project (whaaat t'as jamais entendu parler de THP? Leur méthode va t'impressionner, va vite voir ce qu'il s'y passe en suivant ce [lien](https://www.thehackingproject.org/modalites).)
+la base de données, dans laquelle le model va chercher et trier les données qui l'intéresse pour le renvoyer au controlleur (dans le schéma MVC). Contient tout un tas d'informations. Par exemple tous les comptes *linkedins* des moussaillons qui s'inscrivent à The Hacking Project (whaaat t'as jamais entendu parler de THP? Leur méthode va t'impressionner, va vite voir ce qu'il s'y passe en suivant ce [lien](https://www.thehackingproject.org/modalites).)
 
 ## GET/POST
 
-*get*: pour les moins bilingues d'entre nous: "Obtenir".
-*Post*: qu'on peut comprendre comme "puts" ou plus simplement "poster".
+**get**: pour les moins bilingues d'entre nous: "Obtenir".
+**Post**: qu'on peut comprendre comme "puts" ou plus simplement "poster".
 Si l'on veut accéder à toutes les photos, par exemples, le controlleur va renvoyer la liste de tous les articles grâce à la méthode get. Des fois il va remplir un formulaire (par ex nouvel utilisateur, nom, email ect) le formulaire va envoyer un truc et ça c'est *post*, quand tu soumets le formulaire, c'est une autre méthode dans ton controller, tu vas lui dire, attention là on est en train de poster un truc.
 
 ## Le concept de migration
@@ -49,10 +49,10 @@ les modèles font le lien entre la base de données et le controlleur, donc notr
 Create, read, update, destroy = Ce n'est pas la définition du street art, mais comment faire pour intéragir de manière simple avec notre base de donnée par le biais du front-end parce qu'avec la console c'est super mais c'est pas comme ça que les users vont l'utiliser, c'est via notre site. 
 Pour avoir son CRUD : resources :articles sur le controller puis rails routes sur la commande et on a le CRUD complet sur le model Articles
 
-Fonction | Interaction
+**Fonction** | **Interaction**
 ------------|------------
-Create | Créer un élément dans la Base de Données. #Post
-Read | Lit un élément de la BDD. #Get
-Update | Modifie un élément.
-Delete | Supprime un élément de la BDD.
+**C**reate | Créer un élément dans la Base de Données. #Post
+**R**ead | Lit un élément de la BDD. #Get
+**U**pdate | Modifie un élément.
+**D**elete | Supprime un élément de la BDD.
 
