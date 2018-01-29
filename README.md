@@ -27,15 +27,15 @@ Biensûr il est possible de déclarer plusieurs routes en même temps:
 
 
 
-## La base de donnée
+## La base de donnée (BDD)
 
-la base de données, dans laquelle le model va chercher et trier les données qui l'intéresse pour le renvoyer au controlleur (dans le schéma MVC). Contient tout un tas d'informations. Par exemple tous les comptes *linkedins* des moussaillons qui s'inscrivent à The Hacking Project (whaaat t'as jamais entendu parler de THP? Leur méthode va t'impressionner, va vite voir ce qu'il s'y passe en suivant ce [lien](https://www.thehackingproject.org/modalites).)
+La base de données, dans laquelle le model va chercher et trier les données qui l'intéresse pour le renvoyer au controlleur (dans le schéma MVC). Contient tout un tas d'informations. Par exemple tous les comptes *linkedins* des moussaillons qui s'inscrivent à The Hacking Project (whaaat t'as jamais entendu parler de THP? Leur méthode va t'impressionner, va vite voir ce qu'il s'y passe en suivant ce [lien](https://www.thehackingproject.org/modalites).)
 
 ## GET/POST
 
-**get**: pour les moins bilingues d'entre nous: "Obtenir".
+**Get**: que j'aime à définir comme "Obtenir".
 
-**Post**: qu'on peut comprendre comme "puts" ou plus simplement "poster".
+**Post**: qu'on peut comprendre comme "puts" ou plus simplement "poster". un moyen mémo-technique imparable: Post = Poste | Poste = Poster. Voilà. De rien.
 
 Si l'on veut accéder à toutes les photos, par exemples, le controlleur va renvoyer la liste de tous les articles grâce à la méthode get. Des fois il va remplir un formulaire (par ex nouvel utilisateur, nom, email ect) le formulaire va envoyer un truc et ça c'est *post*, quand tu soumets le formulaire, c'est une autre méthode dans ton controller, tu vas lui dire, attention là on est en train de poster un truc.
 
@@ -43,8 +43,9 @@ Si l'on veut accéder à toutes les photos, par exemples, le controlleur va renv
 Ce qu'on appelle "migration" sur ruby on rails permet de modifier la structure de la base de données. C'est à dire ajouter, supprimer ou modifier une table ou une colonne. Lorsque l'on souhaite modifier le nom d'une colonne par exemple, il faut effectuer une migration pour l'enregistrer.Mais Rails nous permet d'effectuer cette migration facilement. Sans cela il faudrait se taper tout le SQL à la main, ce qui est compliqué, surtout quand on ne sait pas ce qu'est le SQL... Malin.
 
 
-## Les relations entre les models et les BDD
-les modèles font le lien entre la base de données et le controlleur, donc notre application au final. Ils permettent de selectionner dans la base de données les informations qui nous intéressent pour les transmettre au controlleur et les mettre en forme dans la view, donc les mettre en forme sur le front-end.
+## Les relations entre les modèles et les BDD
+*En général, on peut dire qu'elles sont bonnes.*
+Blague à part (oui...) les modèles font le lien entre la base de données et le controlleur, donc notre application, au final. Ils permettent de selectionner dans la base de données les informations qui nous intéressent pour les transmettre au controlleur et les mettre en forme dans la view, donc les mettre en forme sur le front-end.
 
 ## CRUD
 Create, read, update, destroy = Ce n'est pas la définition du street art, mais comment faire pour intéragir de manière simple avec notre base de donnée par le biais du front-end parce qu'avec la console c'est super mais c'est pas comme ça que les users vont l'utiliser, c'est via notre site. 
@@ -57,3 +58,8 @@ Pour avoir son CRUD : resources :articles sur le controller puis rails routes su
 **U**pdate | Modifie un élément.
 **D**elete | Supprime un élément de la BDD.
 
+
+## Conclusion 
+J'espère que cela éclairera tes yeux de noob. Si non, et j'en suis fort attristé, je te conseille de poser tes questions directement à [David Heinemeier Hanson](https://twitter.com/dhh?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor), il se fera un plaisir de te répondre.
+
+Force et Honneur à toi. 
