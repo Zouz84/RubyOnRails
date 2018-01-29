@@ -1,4 +1,4 @@
-<align="center">###### Bienvenue
+<center><h1>###### Bienvenue</h1></center>
 ##### dans
 #### le monde
 ### impitoyable
