@@ -2,18 +2,21 @@
 
 
 Si vous avez toujours voulu tout savoir sur Ruby On Rails, passez votre chemin, il existe de biens meilleurs README ailleurs, [ici](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet) par exemple.
-Si vous avez la flemme, alors voici les termes à connaître.
+Si vous vous en tamponnez le coquillard, alors voici quelques termes à connaître.
 
-## Lame statique
-Un *site statique* est composé de pages fixes, qui ne changeront pas quelque soit l'utilisateur. Un site dynamique sera présenté de façon différente selon l'interaction avec le visiteur. Les informations présentées ne sont pas les mêmes selon les requêtes de l'internaute. Par exemple twitter / facebook sont des sites dynamiques et un site de restaurant avec juste l'adresse, le menu, des photos du restau est un site statique. Dès qu'il y a un compte utilisateur, possibilité de commenter, ou de poster des choses par exemple, c'est un site dynamique.
+## Site statique ou dynamique ? 
+Un *site statique* est composé de pages fixes, qui ne changeront pas quelque soit l'utilisateur. Un site dynamique sera présenté de façon différente selon l'interaction avec le visiteur. Les informations présentées ne sont pas les mêmes selon les requêtes de l'internaute. Par exemple twitter / facebook sont des sites dynamiques car leur contenu change (nouveaux tweets, commentaires, like...) alors qu'un site de restaurant qui présente juste l'adresse, le menu, des photos du restau est un site statique. Dès qu'il y a un compte utilisateur, possibilité de commenter, ou de poster des choses par exemple, c'est un site dynamique.
 
-## Most Valuable Controller
+## Most Valuable Controller (MVC) :basketball:
 
 *Model View Controller* : C'est un modèle utilisé par Rails ou par d'autres languages comme PHP pour montrer une application web. On peut l'expliquer grâce à une image. Voici le chemin de la requête : l'utilisateur va sur le site, en fonction de ce qu'il demande au site, comment il se connecte dessus, le site va aller sur le routeur et va demander une fonction, une méthode du controlleur. Le controlleur reconnait la méthode, demande au modèle les informations nécessaire dans la database. Le model renvoit ces informations au controlleur, qui fait le lien avec la view, c'est à dire que le controlleur envoit les informations récupérer à la view, qui va construire la page, la mettre en forme (en HTML et ruby, avec ces informations et renvoyer ce message au controlleur, qui renvoit ça sur le site et à l'utilisateur.
 
-## > Sur la route, oui, il y a eu du doute...
+![alt text](https://github.com/Nymze/Ruby_on_Rails/blob/master/MVC.png "MVC 1")
 
+## Chacun sa route
+> Sur ma route, oui, il y a eu du move, oui... 
 Les routes permettent d’interpréter les URL et d’orienter vers les bonnes actions des controlleurs. La configuration se trouve dans le fichier config/routes.rb .
+
 
 ## La base de donnée
 
@@ -34,4 +37,3 @@ les modèles font le lien entre la base de données et le controlleur, donc notr
 Create, read, update, destroy = Ce n'est pas la définition du street art, mais comment faire pour intéragir de manière simple avec notre base de donnée mais par le biais du front-end parce qu'avec la console c'est super mais c'est pas comme ça que les users vont l'utiliser, c'est via notre site. 
 Pour avoir son CRUD : resources :articles sur le controller puis rails routes sur la commande et on a le CRUD complet sur le model Articles
 
-![alt text](https://github.com/Nymze/Ruby_on_Rails/blob/master/MVC.png "MVC 1")
