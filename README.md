@@ -1,2 +1,6 @@
-#RubyOnRails
-Week 4 - Day 1
+###### Bienvenue
+##### dans
+#### le monde
+### impitoyable
+## de
+# RUBY ON RAILS !
