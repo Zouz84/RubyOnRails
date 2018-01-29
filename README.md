@@ -21,7 +21,7 @@ En quelques mots, l'utilisateur qui se balade sur votre site envoie des requête
 
 La configuration d'une route se présente comme suit:
 
-        ```ruby resources :photos```
+ ```resources :photos```
 
 Biensûr il est possible de déclarer plusieurs routes en même temps:
         ```ruby resources :photos, :books, :videos```
@@ -48,4 +48,11 @@ les modèles font le lien entre la base de données et le controlleur, donc notr
 ## CRUD
 Create, read, update, destroy = Ce n'est pas la définition du street art, mais comment faire pour intéragir de manière simple avec notre base de donnée par le biais du front-end parce qu'avec la console c'est super mais c'est pas comme ça que les users vont l'utiliser, c'est via notre site. 
 Pour avoir son CRUD : resources :articles sur le controller puis rails routes sur la commande et on a le CRUD complet sur le model Articles
+
+Fonction | Interaction
+------------|------------
+Create | Créer un élément dans la Base de Données. #Post
+Read | Lit un élément de la BDD. #Get
+Update | Modifie un élément.
+Delete | Supprime un élément de la BDD.
 
